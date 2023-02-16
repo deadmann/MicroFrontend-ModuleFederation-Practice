@@ -1,0 +1,6 @@
+pnpm:
+https://pnpm.io/installation
+
+pnpx:
+https://stackoverflow.com/questions/70248239/how-to-install-pnpx
+pnpx [Deprecated] => pnpm dlx

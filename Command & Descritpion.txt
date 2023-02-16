@@ -1,0 +1,50 @@
+*pnpx: look in tools.txt
+
+CMD - Move to directory:
+**** Why here we do not use 'React App', it contains a complex configuration include webpack configuration
+> pnpx create-mf-app
+*mf app stands for Module Federation App
+Name: Home (*Home Page App)
+Project Type: Application
+Port: ???? E.g. 3000
+Framework: ??? React
+Language: ??? JavaScript
+
+npm i -g yarn
+
+* '&&' powershell ^7.2
+yarn && yarn start
+
+
+expose `.jsx` in `webpack.config.js` in `plugins -> exposes`
+this also provides the `[server]/remoteEntry.js` after restarting
+then we use this remote address inside the `webpack.config.js` in `plugins -> remotes`
+
+Here:
+ - Home:
+    exposes: {
+        "./Header": "./src/Header.jsx",
+        "./Footer": "./src/Footer.jsx",
+      }
+ - PDP:
+    remotes: {
+        home: "home@http://localhost:3000/remoteEntry.js"
+      }
+`home@` defined within the `webpack.config.js` as `name`
+
+then in imports we should use `home` instead of `.`. e.g. import Header from 'home/Header'
+
+
+
+Creating `Safe Component` is called `Error Boundary`
+
+
+Adding Router
+yarn add react-router-dom
+
+*Switch   ->   Routes
+*<Route ... component={X} />   ->   <Route ... element={<X />} />
+
+
+Adding Rxjs
+yarn add rxjs
