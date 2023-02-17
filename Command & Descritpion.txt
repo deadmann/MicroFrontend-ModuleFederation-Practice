@@ -48,3 +48,10 @@ yarn add react-router-dom
 
 Adding Rxjs
 yarn add rxjs
+
+
+yarn add @testing-library/react-hooks jest -D
+
+yarn add -D jest-environment-jsdom
+
+yarn jest           //RUN
