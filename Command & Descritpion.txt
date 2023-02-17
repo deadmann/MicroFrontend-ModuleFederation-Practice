@@ -50,8 +50,12 @@ Adding Rxjs
 yarn add rxjs
 
 
+Unit Testing:
 yarn add @testing-library/react-hooks jest -D
-
 yarn add -D jest-environment-jsdom
-
 yarn jest           //RUN
+
+End-To-End (E2E) Testing:
+yarn add cypress --dev
+yarn run cypress open
+Tools - Recorder: https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab/related
